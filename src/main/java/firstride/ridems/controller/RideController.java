@@ -1,5 +1,6 @@
 package firstride.ridems.controller;
 
+import firstride.ridems.dto.RideDetailsDTO;
 import firstride.ridems.entity.RideEntity;
 import firstride.ridems.service.RideService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,11 @@ public class RideController {
         return rideService.createRide(ride);
     }
     @GetMapping("findAll")
-    public ResponseEntity<List<RideEntity>> findAll(){
+    public ResponseEntity<List<RideDetailsDTO>> findAll(){
         return ResponseEntity.ok(rideService.getAllRides());
     }
     @GetMapping("findById/{id}")
-    public ResponseEntity<RideEntity> getRideById(@PathVariable Long id) {
+    public ResponseEntity<RideDetailsDTO> getRideById(@PathVariable Long id) {
         return rideService.getRideById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

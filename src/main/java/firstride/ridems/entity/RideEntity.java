@@ -14,11 +14,11 @@ public class RideEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String orgin;
+    private String origin;
     private Double longitudeOrigin;
     private Double latitudeOrigin;
 
-    private String destinaion;
+    private String destination;
     private Double longitudeDestination;
     private Double latitudeDestination;
 

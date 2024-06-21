@@ -1,15 +1,18 @@
 package firstride.ridems.dto;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 
-public class Driver{
+public class DriverDTO {
     private Long id;
     private String userName;
-    private String password;
+    //private String password;
     private String firstName;
     private String lastName;
     private String email;
